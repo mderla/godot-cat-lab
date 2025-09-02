@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyg5v5rmrdd5m"
-path="res://.godot/imported/furniture_sprites.png-aae86d52a1c00aa298dacb15a9bf4af4.ctex"
+uid="uid://ca8ckilasfuuu"
+path="res://.godot/imported/floor_and_wall_tileset.png-a61096534b86e23e5393eacb9f80bacf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/furniture_sprites.png"
-dest_files=["res://.godot/imported/furniture_sprites.png-aae86d52a1c00aa298dacb15a9bf4af4.ctex"]
+source_file="res://assets/sprites/floor_and_wall_tileset.png"
+dest_files=["res://.godot/imported/floor_and_wall_tileset.png-a61096534b86e23e5393eacb9f80bacf.ctex"]
 
 [params]
 

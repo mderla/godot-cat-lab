@@ -8,7 +8,6 @@ func _ready() -> void:
 		# ... at least if they have a z-index
 		if child is Node2D:			
 			child.z_index = child.position.y
-			print(child, child.z_index)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

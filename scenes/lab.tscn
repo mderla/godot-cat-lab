@@ -1,17 +1,70 @@
-[gd_scene load_steps=4 format=3 uid="uid://clbi7bw0drvkk"]
+[gd_scene load_steps=13 format=3 uid="uid://clbi7bw0drvkk"]
 
 [ext_resource type="PackedScene" uid="uid://bagdh5vncrphc" path="res://scenes/cat.tscn" id="1_ad0ok"]
 [ext_resource type="Script" path="res://scripts/lab.gd" id="1_c1634"]
 [ext_resource type="PackedScene" uid="uid://d0uf5qtld0n2l" path="res://scenes/bookshelf.tscn" id="2_3ugkt"]
+[ext_resource type="PackedScene" uid="uid://nhrujl6ljt4t" path="res://scenes/desk.tscn" id="4_yw5wv"]
+[ext_resource type="PackedScene" uid="uid://t6nvqvk4avof" path="res://scenes/table.tscn" id="5_uyott"]
+[ext_resource type="Texture2D" uid="uid://ca8ckilasfuuu" path="res://assets/sprites/floor_and_wall_tileset.png" id="6_muaqg"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_aai4c"]
+distance = -53.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_p0vbt"]
+normal = Vector2(0, 1)
+distance = -18.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ecnxw"]
+distance = -96.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_f65dc"]
+distance = -96.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_025bl"]
+texture = ExtResource("6_muaqg")
+0:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_1tr0b"]
+sources/0 = SubResource("TileSetAtlasSource_025bl")
 
 [node name="Lab" type="Node2D"]
 script = ExtResource("1_c1634")
 
 [node name="Bookshelf" parent="." instance=ExtResource("2_3ugkt")]
-position = Vector2(65, -15)
+position = Vector2(35, -9)
+
+[node name="Desk" parent="." instance=ExtResource("4_yw5wv")]
+position = Vector2(-38, -4)
 
 [node name="Cat" parent="." instance=ExtResource("1_ad0ok")]
-position = Vector2(1, 1)
+position = Vector2(-42, 25)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(6, 6)
+
+[node name="Table" parent="." instance=ExtResource("5_uyott")]
+position = Vector2(4, 31)
+
+[node name="Walls" type="StaticBody2D" parent="."]
+
+[node name="LowerWall" type="CollisionShape2D" parent="Walls"]
+shape = SubResource("WorldBoundaryShape2D_aai4c")
+
+[node name="UpperWall" type="CollisionShape2D" parent="Walls"]
+shape = SubResource("WorldBoundaryShape2D_p0vbt")
+
+[node name="LeftWall" type="CollisionShape2D" parent="Walls"]
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_ecnxw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
+rotation = -1.5708
+shape = SubResource("WorldBoundaryShape2D_f65dc")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_1tr0b")
+format = 2
