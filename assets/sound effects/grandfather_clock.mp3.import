@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b1kcggn1gists"
+path="res://.godot/imported/grandfather_clock.mp3-d4c9043ee1a846a370e150976ddd9c76.mp3str"
+
+[deps]
+
+source_file="res://assets/sound effects/grandfather_clock.mp3"
+dest_files=["res://.godot/imported/grandfather_clock.mp3-d4c9043ee1a846a370e150976ddd9c76.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
