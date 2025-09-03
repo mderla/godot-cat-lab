@@ -9,9 +9,6 @@ const SPEED = 1000.0
 
 func _physics_process(delta: float) -> void:
 	
-	# rendering correctly in front and back
-	z_index = position.y
-	
 	# grabbing direction of input
 	var direction:Vector2 = Input.get_vector("left", "right", "up", "down")
 	
