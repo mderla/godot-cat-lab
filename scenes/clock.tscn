@@ -1,0 +1,80 @@
+[gd_scene load_steps=12 format=3 uid="uid://ddleylyd2tpk4"]
+
+[ext_resource type="Texture2D" uid="uid://dyg5v5rmrdd5m" path="res://assets/sprites/furniture_sprites.png" id="1_x5bci"]
+[ext_resource type="Texture2D" uid="uid://bqqxvtjgjlwc0" path="res://assets/sprites/pendulum.png" id="2_xsxt4"]
+[ext_resource type="AudioStream" uid="uid://b1kcggn1gists" path="res://assets/sound effects/grandfather_clock.mp3" id="3_s71ou"]
+[ext_resource type="Script" path="res://scripts/clock/pendulum.gd" id="3_xvrxk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o0xcu"]
+size = Vector2(26, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0c33"]
+atlas = ExtResource("2_xsxt4")
+region = Rect2(0, 0, 9, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dgye"]
+atlas = ExtResource("2_xsxt4")
+region = Rect2(9, 0, 9, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3r7jj"]
+atlas = ExtResource("2_xsxt4")
+region = Rect2(18, 0, 9, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwafv"]
+atlas = ExtResource("2_xsxt4")
+region = Rect2(27, 0, 9, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_347md"]
+atlas = ExtResource("2_xsxt4")
+region = Rect2(36, 0, 9, 19)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j27sj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0c33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0dgye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3r7jj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwafv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_347md")
+}],
+"loop": true,
+"name": &"pendulum swing",
+"speed": 1.0
+}]
+
+[node name="Clock" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -25)
+texture = ExtResource("1_x5bci")
+region_enabled = true
+region_rect = Rect2(50, 29, 27, 60)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_o0xcu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -11.5)
+sprite_frames = SubResource("SpriteFrames_j27sj")
+animation = &"pendulum swing"
+autoplay = "pendulum swing"
+frame_progress = 0.553981
+script = ExtResource("3_xvrxk")
+
+[node name="PendulumSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, -19)
+stream = ExtResource("3_s71ou")
+autoplay = true
+bus = &"Sound Effercts"
+
+[connection signal="animation_looped" from="AnimatedSprite2D" to="AnimatedSprite2D" method="_on_animation_looped"]

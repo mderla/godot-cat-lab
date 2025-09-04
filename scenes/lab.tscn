@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://clbi7bw0drvkk"]
+[gd_scene load_steps=13 format=3 uid="uid://clbi7bw0drvkk"]
 
 [ext_resource type="PackedScene" uid="uid://bagdh5vncrphc" path="res://scenes/cat.tscn" id="1_ad0ok"]
 [ext_resource type="PackedScene" uid="uid://d0uf5qtld0n2l" path="res://scenes/bookshelf.tscn" id="2_3ugkt"]
 [ext_resource type="PackedScene" uid="uid://nhrujl6ljt4t" path="res://scenes/desk.tscn" id="4_yw5wv"]
 [ext_resource type="PackedScene" uid="uid://t6nvqvk4avof" path="res://scenes/table.tscn" id="5_uyott"]
+[ext_resource type="PackedScene" uid="uid://ddleylyd2tpk4" path="res://scenes/clock.tscn" id="6_7w61s"]
 [ext_resource type="Texture2D" uid="uid://ca8ckilasfuuu" path="res://assets/sprites/floor_and_wall_tileset.png" id="6_muaqg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_025bl"]
@@ -18,17 +19,17 @@ texture = ExtResource("6_muaqg")
 sources/0 = SubResource("TileSetAtlasSource_025bl")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_aai4c"]
-distance = -53.0
+distance = -63.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_p0vbt"]
 normal = Vector2(0, 1)
 distance = -18.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ecnxw"]
-distance = -96.0
+distance = -111.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_f65dc"]
-distance = -96.0
+distance = -111.0
 
 [node name="Lab" type="Node2D"]
 y_sort_enabled = true
@@ -37,10 +38,10 @@ y_sort_enabled = true
 z_index = -4096
 tile_set = SubResource("TileSet_1tr0b")
 format = 2
-layer_0/tile_data = PackedInt32Array(-65538, 0, 1, -65539, 0, 1, -65540, 0, 1, -65537, 0, 1, -131072, 0, 1, -131071, 0, 1, -131070, 0, 1, -131069, 0, 1, -65541, 0, 1, -131068, 0, 1, -5, 0, 3, -4, 0, 3, -2, 0, 3, -1, 0, 3, -65536, 0, 3, -3, 0, 3, -65535, 0, 3, -65534, 0, 3, -65532, 0, 3, -65533, 0, 3, 65531, 0, 3, 65532, 0, 3, 65533, 0, 3, 65534, 0, 3, 65535, 0, 3, 0, 0, 3, 1, 0, 3, 2, 0, 3, 3, 0, 3, 4, 0, 3, 5, 0, 3, -65531, 0, 3, -6, 0, 3, 65530, 0, 3, 131066, 0, 3, 131067, 0, 3, 131068, 0, 3, 131069, 0, 3, 131070, 0, 3, 131071, 0, 3, 65536, 0, 3, 65537, 0, 3, 65538, 0, 3, 65539, 0, 3, 65540, 0, 3, 65541, 0, 3, 196602, 0, 3, 196603, 0, 3, 196604, 0, 3, 196605, 0, 3, 196606, 0, 3, 196607, 0, 3, 131072, 0, 3, 131073, 0, 3, 131074, 0, 3, 131075, 0, 3, 131076, 0, 3, 131077, 0, 3, -131067, 0, 1, -65542, 0, 1, -131078, 0, 0, -131077, 0, 0, -131076, 0, 0, -131075, 0, 0, -131074, 0, 0, -131073, 0, 0, -196608, 0, 0, -196607, 0, 0, -196606, 0, 0, -196605, 0, 0, -196604, 0, 0, -196603, 0, 0, -262139, 0, 0, -262140, 0, 0, -262141, 0, 0, -262142, 0, 0, -262144, 0, 0, -262143, 0, 0, -196609, 0, 0, -196610, 0, 0, -196611, 0, 0, -196612, 0, 0, -196613, 0, 0, -196614, 0, 0)
+layer_0/tile_data = PackedInt32Array(-65538, 0, 1, -65539, 0, 1, -65540, 0, 1, -65537, 0, 1, -131072, 0, 1, -131071, 0, 1, -131070, 0, 1, -131069, 0, 1, -65541, 0, 1, -131068, 0, 1, -5, 0, 3, -4, 0, 3, -2, 0, 3, -1, 0, 3, -65536, 0, 3, -3, 0, 3, -65535, 0, 3, -65534, 0, 3, -65532, 0, 3, -65533, 0, 3, 65531, 0, 3, 65532, 0, 3, 65533, 0, 3, 65534, 0, 3, 65535, 0, 3, 0, 0, 3, 1, 0, 3, 2, 0, 3, 3, 0, 3, 4, 0, 3, 5, 0, 3, -65531, 0, 3, -6, 0, 3, 65530, 0, 3, 131066, 0, 3, 131067, 0, 3, 131068, 0, 3, 131069, 0, 3, 131070, 0, 3, 131071, 0, 3, 65536, 0, 3, 65537, 0, 3, 65538, 0, 3, 65539, 0, 3, 65540, 0, 3, 65541, 0, 3, 196602, 0, 3, 196603, 0, 3, 196604, 0, 3, 196605, 0, 3, 196606, 0, 3, 196607, 0, 3, 131072, 0, 3, 131073, 0, 3, 131074, 0, 3, 131075, 0, 3, 131076, 0, 3, 131077, 0, 3, -131067, 0, 1, -65542, 0, 1, -131078, 0, 0, -131077, 0, 0, -131076, 0, 0, -131075, 0, 0, -131074, 0, 0, -131073, 0, 0, -196608, 0, 0, -196607, 0, 0, -196606, 0, 0, -196605, 0, 0, -196604, 0, 0, -196603, 0, 0, -262139, 0, 0, -262140, 0, 0, -262141, 0, 0, -262142, 0, 0, -262144, 0, 0, -262143, 0, 0, -196609, 0, 0, -196610, 0, 0, -196611, 0, 0, -196612, 0, 0, -196613, 0, 0, -196614, 0, 0, -131066, 0, 1, -196602, 0, 0, -262138, 0, 0, -65530, 0, 3, -131079, 0, 0, -196615, 0, 0, -65543, 0, 1, 6, 0, 3, 65542, 0, 3, 131078, 0, 3, -7, 0, 3, 65529, 0, 3, 131065, 0, 3, 196601, 0, 3, 262137, 0, 3, 262138, 0, 3, 262139, 0, 3, 262140, 0, 3, 262141, 0, 3, 262142, 0, 3, 262143, 0, 3, 196608, 0, 3, 196609, 0, 3, 196610, 0, 3, 196611, 0, 3, 196612, 0, 3, 196613, 0, 3, 196614, 0, 3)
 
 [node name="Bookshelf" parent="." instance=ExtResource("2_3ugkt")]
-position = Vector2(35, -9)
+position = Vector2(31, -9)
 
 [node name="Desk" parent="." instance=ExtResource("4_yw5wv")]
 position = Vector2(-38, -4)
@@ -49,7 +50,7 @@ position = Vector2(-38, -4)
 position = Vector2(-42, 25)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(6, 6)
+zoom = Vector2(5, 5)
 
 [node name="Table" parent="." instance=ExtResource("5_uyott")]
 position = Vector2(4, 31)
@@ -69,3 +70,6 @@ shape = SubResource("WorldBoundaryShape2D_ecnxw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
 rotation = -1.5708
 shape = SubResource("WorldBoundaryShape2D_f65dc")
+
+[node name="Clock" parent="." instance=ExtResource("6_7w61s")]
+position = Vector2(82, -4)

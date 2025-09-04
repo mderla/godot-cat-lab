@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp3llq37n0hyy"
-path="res://.godot/imported/furniture_drawing_board.png-5af4ac330e4176384948d9a5381a1b27.ctex"
+uid="uid://bqqxvtjgjlwc0"
+path="res://.godot/imported/pendulum.png-439fb342ab0d65d48f11dd9f9b60e6e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/furniture_drawing_board.png"
-dest_files=["res://.godot/imported/furniture_drawing_board.png-5af4ac330e4176384948d9a5381a1b27.ctex"]
+source_file="res://assets/sprites/pendulum.png"
+dest_files=["res://.godot/imported/pendulum.png-439fb342ab0d65d48f11dd9f9b60e6e5.ctex"]
 
 [params]
 
