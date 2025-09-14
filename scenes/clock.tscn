@@ -54,17 +54,17 @@ animations = [{
 [node name="Clock" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -25)
+position = Vector2(-0.5, -21)
 texture = ExtResource("1_x5bci")
 region_enabled = true
 region_rect = Rect2(50, 29, 27, 60)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -2)
+position = Vector2(-0.5, 2)
 shape = SubResource("RectangleShape2D_o0xcu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -11.5)
+position = Vector2(-0.5, -7.5)
 sprite_frames = SubResource("SpriteFrames_j27sj")
 animation = &"pendulum swing"
 autoplay = "pendulum swing"
@@ -72,7 +72,7 @@ frame_progress = 0.553981
 script = ExtResource("3_xvrxk")
 
 [node name="PendulumSound" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(0, -19)
+position = Vector2(-0.5, -15)
 stream = ExtResource("3_s71ou")
 autoplay = true
 bus = &"Sound Effercts"
