@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bb3smen78jmjn"]
+
+[ext_resource type="Texture2D" uid="uid://dyg5v5rmrdd5m" path="res://assets/sprites/furniture_sprites.png" id="1_ff73c"]
+
+[node name="Carpet" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 17)
+texture = ExtResource("1_ff73c")
+region_enabled = true
+region_rect = Rect2(94, 58, 43, 27)
