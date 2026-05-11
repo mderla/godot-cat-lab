@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://clbi7bw0drvkk"]
+[gd_scene load_steps=14 format=3 uid="uid://clbi7bw0drvkk"]
 
 [ext_resource type="PackedScene" uid="uid://bagdh5vncrphc" path="res://scenes/cat.tscn" id="1_ad0ok"]
 [ext_resource type="PackedScene" uid="uid://d0uf5qtld0n2l" path="res://scenes/bookshelf.tscn" id="2_3ugkt"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://t6nvqvk4avof" path="res://scenes/table.tscn" id="5_uyott"]
 [ext_resource type="PackedScene" uid="uid://ddleylyd2tpk4" path="res://scenes/clock.tscn" id="6_7w61s"]
 [ext_resource type="Texture2D" uid="uid://ca8ckilasfuuu" path="res://assets/sprites/floor_and_wall_tileset.png" id="6_muaqg"]
+[ext_resource type="PackedScene" uid="uid://bb3smen78jmjn" path="res://scenes/carpet.tscn" id="7_064jp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_025bl"]
 texture = ExtResource("6_muaqg")
@@ -67,9 +68,12 @@ shape = SubResource("WorldBoundaryShape2D_p0vbt")
 rotation = 1.5708
 shape = SubResource("WorldBoundaryShape2D_ecnxw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
+[node name="RightWall" type="CollisionShape2D" parent="Walls"]
 rotation = -1.5708
 shape = SubResource("WorldBoundaryShape2D_f65dc")
 
 [node name="Clock" parent="." instance=ExtResource("6_7w61s")]
 position = Vector2(82, -4)
+
+[node name="Carpet" parent="." instance=ExtResource("7_064jp")]
+position = Vector2(-29, 0)
