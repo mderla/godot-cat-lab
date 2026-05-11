@@ -15,4 +15,4 @@
 
 # Copyright
 
-&copy; 2025 Mishael Derla - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+&copy; 2026 Miriam Derla - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
